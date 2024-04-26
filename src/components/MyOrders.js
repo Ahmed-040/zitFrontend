@@ -42,7 +42,7 @@ const MyOrders = () => {
                     <OrderCard key={order.order_id} order={order} />
                 ))}
             </div>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-.plan-card {
+/* .plan-card {
     display: flex;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -7,8 +7,8 @@
 }
 
 .plan-image {
-    width: 150px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 150px; 
+    height: auto; 
     margin-right: 20px;
     border-radius: 8px;
 }
@@ -19,13 +19,13 @@
 
 .plan-name {
     font-size: 24px;
-    color: #333; /* Darker color */
+    color: #333; 
     margin-bottom: 10px;
 }
 
 .plan-description {
     font-size: 16px;
-    color: #443c3c; /* Medium color */
+    color: #443c3c; 
     margin-bottom: 10px;
 }
 .purchase-button {
@@ -37,12 +37,31 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px; /* Add margin to separate from plan details */
+    margin-top: 10px; 
 }
 
 .purchase-button:hover {
     background-color: #287419;
 }
+
+
+
+.plan-details strong {
+    color: #000000;
+}
+
+.plan-details .plan-amount {
+    color: #007bff; 
+}
+
+.plan-details .plan-term,
+.plan-details .plan-expected-return {
+    color: #666; 
+}
+
+.plans-container{
+    margin-top: 75px;
+} */
 
 /* .plan-details p {
     font-size: 14px;
@@ -50,19 +69,40 @@
     margin-bottom: 5px;
 } */
 
-.plan-details strong {
-    color: #000000; /* Darker color */
-}
-
-.plan-details .plan-amount {
-    color: #007bff; /* Primary color */
-}
-
-.plan-details .plan-term,
-.plan-details .plan-expected-return {
-    color: #666; /* Medium color */
-}
-
-.plans-container{
-    margin-top: 75px;
-}
+.plan-card {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .plan-details {
+    display: flex;
+    width: 100%;
+  }
+  
+  .plan-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .plan-text {
+    padding: 20px;
+    width: calc(100% - 200px);
+  }
+  
+  .plan-name {
+    margin-bottom: 10px;
+  }
+  
+  .plan-description {
+    margin-bottom: 10px;
+  }
+  
+  .purchase-button {
+    margin-top: auto; /* Pushes the button to the bottom of the container */
+    align-self: flex-end;
+  }
+ 

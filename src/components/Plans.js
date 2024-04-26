@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PlanCard from './Plancard';
 import Header from './Header';
 import '../styles/plancard.css';
+import Footer from './Footer';
 const Plans = () => {
     const [plans, setPlans] = useState([]);
 
@@ -33,6 +34,7 @@ const Plans = () => {
                     <PlanCard key={plan.id} plan={plan} />
                 ))}
             </div>
+            <Footer></Footer>
         </div>
        
 
