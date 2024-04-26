@@ -1,0 +1,81 @@
+.login-container {
+    width: 400px; /* Set the width of the login container */
+    margin: 0 auto; /* Center the login container horizontally */
+    padding: 20px; /* Add padding around the login container */
+    border: 1px solid #ccc; /* Add a border to the login container */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+    margin-top:150px;
+}
+
+.login-heading {
+    text-align: center; /* Center align the login heading */
+    margin-bottom: 20px; /* Add margin below the login heading */
+}
+
+.login-form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Arrange form items vertically */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Add margin between form groups */
+}
+
+.form-label {
+    font-weight: bold; /* Make form labels bold */
+}
+
+.form-input {
+    width: 100%; /* Stretch form inputs to 100% width */
+    padding: 8px; /* Add padding to form inputs */
+    border: 1px solid #ccc; /* Add border to form inputs */
+    border-radius: 3px; /* Add border radius for rounded corners */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.form-button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px; /* Padding around the button text */
+    border: none; /* Remove border */
+    border-radius: 3px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    width: 100%; /* Stretch the button to 100% width */
+}
+
+.form-button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+.form-link {
+    text-align: center; /* Center align the link */
+    margin-top: 10px;
+    color:black /* Add margin on top of the link */
+    
+}
+
+.form-link a {
+    color: #007bff; /* Link text color */
+    text-decoration: none; /* Remove default link underline */
+}
+
+.form-link a:hover {
+    text-decoration: none; /* Add underline on hover */
+}
+.button-link {
+    display: inline-block; /* Display as inline block */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Padding around the button text */
+    border: none; /* Remove border */
+    border-radius: 3px; /* Add border radius for rounded corners */
+    text-decoration: none; /* Remove default link underline */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add transition effect for background color */
+    text-align: center;
+}
+
+.button-link:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}

@@ -1,0 +1,75 @@
+.footer {
+    background-color: #b17575;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.footer-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact {
+    margin-bottom: 15px;
+}
+
+.contact span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.socials a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    background-color: #a08b8b;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Add some space between form groups */
+}
+
+.text-input {
+    width: 50%;
+   
+    padding: 10px;
+    margin-top: 5px; /* Add some space above inputs */
+}
+
+.contact-input {
+    height: 150px; /* Set the height of the textarea */
+}
+
+.btn {
+    width: 50%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
