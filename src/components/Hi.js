@@ -15,34 +15,13 @@ const Hi = () => {
     return (
         
         <div className="landing-page">
-            {/* Header */}
+          
             <Header></Header>
             <Carousel></Carousel>
-            {/* Content */}
-            {/* <main className="content">
-                <h2>Plans Available</h2>
-                <div className="plans-container">
-                 
-                    {plans.map(plan => (
-                        <div key={plan.id} className="plan">
-                            <h3>{plan.name}</h3>
-                            <p>{plan.price}</p>
-                            <ul>
-                                {plan.features.map((feature, index) => (
-                                    <li key={index}>{feature}</li>
-                                ))}
-                            </ul>
-                            <button>Subscribe</button>
-                        </div>
-                    ))}
-                </div>
-            </main> */}
             <Features></Features>
-            {/* <Plans></Plans> */}
             <Testimonials></Testimonials>
            
-        <Faq></Faq>
-            {/* Footer */}
+             <Faq></Faq>
             <footer className="footer">
                
              <Footer></Footer>

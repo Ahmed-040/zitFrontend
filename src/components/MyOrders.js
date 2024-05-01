@@ -14,7 +14,7 @@ const MyOrders = () => {
                     throw new Error('Token not found');
                 }
 
-                const response = await fetch('https://fullstackzit.onrender.com/api/orders/customers', {
+                const response = await fetch('http://localhost:3000/api/orders/customers', {
                     headers: {
                         'Authorization': token
                     }

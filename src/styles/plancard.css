@@ -69,17 +69,19 @@
     margin-bottom: 5px;
 } */
 
-.plan-card {
+ .plan-card {
     display: flex;
     margin-bottom: 20px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
+    width: 100%;
   }
   
   .plan-details {
     display: flex;
     width: 100%;
+
   }
   
   .plan-image {
@@ -90,7 +92,7 @@
   
   .plan-text {
     padding: 20px;
-    width: calc(100% - 200px);
+    width: 100%
   }
   
   .plan-name {
@@ -102,7 +104,12 @@
   }
   
   .purchase-button {
-    margin-top: auto; /* Pushes the button to the bottom of the container */
-    align-self: flex-end;
+    margin-left: auto !important;
+    display: flex !important;
+  
   }
- 
+  .select-control{
+    color:rgb(107, 107, 183)
+  }
+  
+  

@@ -129,7 +129,7 @@ export default function Plans() {
                   '&:hover > svg': { transform: 'translateX(2px)' },
                 }}
               >
-                <span>Learn more</span>
+                {/* <span href="./plans">Learn more</span> */}
                 <ChevronRightRoundedIcon
                   fontSize="small"
                   sx={{ mt: '1px', ml: '2px' }}
@@ -223,7 +223,7 @@ export default function Plans() {
                         event.stopPropagation();
                       }}
                     >
-                      <span>Learn more</span>
+                      {/* <span>Learn more</span> */}
                       <ChevronRightRoundedIcon
                         fontSize="small"
                         sx={{ mt: '1px', ml: '2px' }}

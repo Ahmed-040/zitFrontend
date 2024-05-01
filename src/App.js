@@ -9,7 +9,8 @@ import Success from './components/Success';
 const App = () => {
     return (
       <Router>
-      <Routes>
+        <div style={{ backgroundColor: '#DEF2F1', minHeight: '100vh' }}>
+        <Routes>
           <Route path='/' element={<Signup/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/hi" element={<Hi />} />
@@ -17,6 +18,8 @@ const App = () => {
           <Route path="/MyOrders" element={<MyOrders></MyOrders>} />
           <Route path="/success/:orderId" element={<Success />} />
       </Routes>
+        </div>
+     
   </Router>
     )
 };

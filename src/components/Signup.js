@@ -115,16 +115,20 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import IconButton from '@mui/material/IconButton';
 
 function Signup() {
+    
     const navigate = useNavigate(); 
     const [formData, setFormData] = useState({
         username: '',
@@ -146,23 +150,31 @@ function Signup() {
             [name]: value
         });
     };
+    const handleTogglePassword = () => {
+        setFormData({
+            ...formData,
+            showPassword: !formData.showPassword
+        });
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://fullstackzit.onrender.com/api/customers/signup', {
+            const response = await fetch('http://localhost:3000/api/customers/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(formData)
-            });
+            }).then((res) => res.json());
 
-            if (response.ok) {
-                navigate('/login');
-                alert('Signup successful! Please login again with your credentials.');
+            if (response.resp_code === "200") {
+                toast.success('Signup successful! Please login again with your credentials.',{
+                    autoClose:4000,
+                    onClose:()=>navigate('/login')
+                });
             } else {
-                console.error('Signup failed:', await response.text());
+             toast.error('Signup failed:'+ response?.error);
             }
         } catch (error) {
             console.error('Error signing up:', error);
@@ -222,11 +234,22 @@ function Signup() {
                                 fullWidth
                                 name="password"
                                 label="Password"
-                                type="password"
+                                type={formData.showPassword ? 'text' : 'password'} // toggle between text and password
                                 id="password"
                                 autoComplete="new-password"
                                 value={formData.password}
                                 onChange={handleChange}
+                                InputProps={{ // Add input props to include eye icon
+                                    endAdornment: (
+                                        <IconButton
+                                            aria-label="toggle password visibility"
+                                            onClick={handleTogglePassword}
+                                            edge="end"
+                                        >
+                                            {formData.showPassword ? <VisibilityOff /> : <Visibility />}
+                                        </IconButton>
+                                    )
+                                }}
                             />
                             <TextField
                                 margin="normal"
@@ -333,6 +356,7 @@ function Signup() {
                     </Box>
                 </Grid>
             </Grid>
+            <ToastContainer />
         </ThemeProvider>
     );
 }
